@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration form - Coses</title>
+    <link rel="stylesheet" href="/static/css/login_signup.css"/>
+    <script defer src="/static/js/login_signup.js"></script>
+  </head>
+  <body>
+    <!--Logo-->
+    <center>
+      <div class="header">
+        <div class="icon">
+          <img src="/logo.png" alt="WMDB logo" />
+          <h1>Warranty Management System</h1>
+        </div>
+      </div>
+    </center>
+    <!--Login / Registration Form -->
+    <div class="hero">
+      <div class="form-box" id="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Login
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="social-icons">
+          <img src="/gmail.png" alt="gmail" id="social" onmouseover="social()"/>
+        </div>
+        <form id="login" class="input-group">
+          <input
+            type="text"
+            id="usernameormail"
+            class="input-field"
+            placeholder="Username / Email-Id"
+          />
+          <input
+            type="text"
+            id="login-password"
+            class="input-field"
+            placeholder="Enter Password"
+          />
+          <input type="checkbox" class="check-box" /><span
+            >Remember Password</span
+          >
+          <span style="padding-left: 50%"
+            ><a href="#mail">Forgot Password?</a></span
+          >
+          <div class="button">
+            <div class="container">
+                <div class="tick">
+
+                </div>
+            </div>
+          </div>
+          <div id="error1"></div>
+        </form>
+        <form id="register" class="input-group" action="/" method="GET">
+          <label>First Name</label>
+          <input
+            id="Firstname"
+            name="Firstname"
+            class="input-field"
+            type="textbox"
+          />
+
+          <label>Last name</label>
+          <input
+            id="Lastname"
+            name="Lastname"
+            class="input-field"
+            type="textbox"
+          />
+
+          <label> Mail Id</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="input-field"
+            placeholder="example@someone.com"
+          />
+
+          <label>Enter your Password</label>
+          <input
+            id="password"
+            name="password"
+            class="input-field"
+            type="password"
+          />
+
+          <label>Confirm Password</label>
+          <input
+            id="confirmpassword"
+            name="confirmpassword"
+            class="input-field"
+            type="password"
+          />
+          <input type="checkbox" class="check-box" /><span id="terms"
+            >I agree to the terms and conditions</span
+          >
+          <button type="submit" class="submit-btn">Register</button>
+          <div id="error2"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
