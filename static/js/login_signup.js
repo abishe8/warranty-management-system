@@ -19,7 +19,7 @@ button.addEventListener('click', function () {
        buttonText.style.backgroundColor="#a5d8ff";
     } else if (buttonText.innerHTML === "Submit") {
         buttonText.innerHTML = tickMark;
-          buttonText.style.backgroundColor="mediumseagreen";
+          buttonText.style.backgroundColor="mediumseagreen ";
     }
     this.classList.toggle('button__circle');
 });
@@ -70,35 +70,29 @@ function register() {
     const container = document.getElementById("form-box");
 
     form.addEventListener('submit', (e) => {
-        let messages2 = []
+        errorelement.innerHTML=''
+         let messages2 = []
+         e.preventDefault();
         if (fname.value === '' || fname.value === null) {
-            messages2.push("First name is required");
+            messages2.push("**First name is required");
         }
         if (lname.value === '' || lname.value === null) {
-            messages2.push("Last name is required");
+            messages2.push("**Last name is required");
         }
         if (email.value === '' || email.value === null) {
-            messages2.push("Email is required");
+            messages2.push("**Email is required");
         }
         if (password.value === '' || password.value === null) {
-            messages2.push("Password is required");
+            messages2.push("**Password is required");
         }
         if (confirmpassword.value === '' || confirmpassword.value === null) {
-            messages2.push("Reconfirm password !!!");
+            messages2.push("**Reconfirm password");
         }
         if (password.value != confirmpassword.value) {
-            messages2.push("Passwords don't match!!!");
+            messages2.push("**Passwords don't match");
         }
-        /*Display the error in UI*/
-        if (messages2.length > 0) {
-            e.preventDefault();
-            errorelement.style.paddingTop = "10px";
-            errorelement.innerText = messages2.join(', ');
-            terms.style.paddingBottom = "65px";
-            container.style.height = "700px";
-        }
-
-        if (password.value != '' || password.value != null) {
+       
+        if (password.value.length!=0) {
             if (password.value.length <= 6) {
                 messages2.push("Password must be longer than 6 characters");
             }
@@ -106,7 +100,23 @@ function register() {
                 messages2.push("Password must not exceed 20 characters");
             }
         }
-    })
+   
+        /*Display the error in UI*/
+        if (messages2.length>0 && messages2.length<=6) {
+           
+            messages2.map((message) => {
+            let errorMessage=document.createElement("p");
+            errorMessage.innerHTML = message;
+            errorelement.appendChild(errorMessage)
+            errorelement.style.paddingTop = "10px";
+             
+             terms.style.paddingBottom = "65px";
+            container.style.height = "800px";
+            })
+            
+        }
+
+         })
 }
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Registration form - Coses</title>
     <link rel="stylesheet" href="/static/css/login_signup.css"/>
+    <link rel="stylesheet" href="/static/css/register_form.css"/>
     <script defer src="/static/js/login_signup.js"></script>
   </head>
   <body>
@@ -66,21 +67,23 @@
           <div id="error1"></div>
          
         </form>
-        <form id="register" class="input-group" action="/" method="GET">
+        <form id="register" class="input-group reg-input-group" action="/" method="GET">
           <label>First Name</label>
           <input
             id="Firstname"
             name="Firstname"
-            class="input-field"
+            class="input-field reg-input-field"
             type="textbox"
+            placeholder="Yourfirstname"
           />
 
           <label>Last name</label>
           <input
             id="Lastname"
             name="Lastname"
-            class="input-field"
+            class="input-field reg-input-field"
             type="textbox"
+            placeholder="Your lastname"
           />
 
           <label> Mail Id</label>
@@ -88,7 +91,7 @@
             id="email"
             name="email"
             type="email"
-            class="input-field"
+            class="input-field reg-input-field"
             placeholder="example@someone.com"
           />
 
@@ -96,21 +99,24 @@
           <input
             id="password"
             name="password"
-            class="input-field"
+            class="input-field reg-input-field"
             type="password"
+            placeholder="Your password"
           />
 
           <label>Confirm Password</label>
           <input
             id="confirmpassword"
             name="confirmpassword"
-            class="input-field"
+            class="input-field reg-input-field"
             type="password"
+            placeholder="Confirm password"
           />
+          
           <input type="checkbox" class="check-box" /><span id="terms"
             >I agree to the terms and conditions</span
           >
-          <button type="submit" class="submit-btn">Register</button>
+          <button type="submit" class="submit-btn reg-submit-btn">Register</button>
           <div id="error2"></div>
         </form>
       </div>

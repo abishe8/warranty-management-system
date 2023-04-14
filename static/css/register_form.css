@@ -1,0 +1,32 @@
+.reg-input-field{
+  background-color:#3b5bdb;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.reg-input-group{
+  padding: 10px;
+border-radius: 10px;
+}
+#terms{
+   color:#3b5bdb;
+   font-weight: 700;
+   font-size: 14px;
+}
+.reg-submit-btn{
+    border-radius: 10px;
+    background-color: #3b5bdb;
+    border-color: #3b5bdb;
+    font-size: 16px;
+    color:azure;
+    padding: 5px;
+    width:100px;
+  margin-left: 80px;   
+}
+#error2{
+ color:#c92a2a;
+display: flex;
+flex-direction: column;
+gap:5px;
+}
+ 

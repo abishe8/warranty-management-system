@@ -216,3 +216,7 @@ a:active {
 .forgot-password{
 margin-left: 20px;
 }
+::placeholder {
+  opacity: 0.7; /* Change the opacity value to your desired value */
+  font-weight: 400;
+}
